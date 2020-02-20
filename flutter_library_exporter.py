@@ -9,7 +9,7 @@ import re as _regex
 class FlutterLibraryExporter:
     @staticmethod
     def export_string(file_name):
-        return 'export \'' + _regex.sub(r'\'../src/', r'\'./src', str(file_name)) + '\';'
+        return 'export \'' + _regex.sub(r"../src/", r"./src/", str(file_name)) + '\';'
 
     def __init__(self, file_name):
         """Export and creates an export dart file based on the file 
