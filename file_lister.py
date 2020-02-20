@@ -10,7 +10,7 @@ import os as _os
 class FileLister:
     dir_path_str = ''
 
-    def __init__(self, dir_path_str='./', file_callback=lambda file: 'File: ' + file):
+    def __init__(self, dir_path_str='./', file_callback=None):
         """List all files in the directories.
         @param file_callback: A callback function that callbacks the file string.
         The callback should return a string."""
@@ -18,7 +18,7 @@ class FileLister:
         self.dir_path_str = dir_path_str
         self.list_files(self.dir_path_str, file_callback=file_callback)
 
-    def list_files(self, dir_path_str='./', file_callback=lambda file: 'File: ' + file):
+    def list_files(self, dir_path_str='./', file_callback=None):
         """List files in the subtree of the directories.
         @return: The string all the files based on the [file_callback]."""
         path = dir_path_str

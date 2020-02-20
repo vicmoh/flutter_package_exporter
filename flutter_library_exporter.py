@@ -19,6 +19,7 @@ class FlutterLibraryExporter:
         f = open(str(file_name) + '.dart', "w+")
         fileLister = FileLister(
             dir_path_str='../src',
-            file_callback=FlutterLibraryExporter.export_string)
-        f.write('library ' + str(file_name) + ';\n'
-                + fileLister.list_files() + '\n')
+            file_callback=lambda file: FlutterLibraryExporter.export_string(file))
+        string_to_write = 'library ' + \
+            str(file_name) + ';\n' + str(fileLister.list_files()) + '\n'
+        f.write(string_to_write)

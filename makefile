@@ -1,5 +1,5 @@
 # Running the script.
-FILE='export'
+FILE=export
 run:
 	python3 run.py "$(FILE)"
 
