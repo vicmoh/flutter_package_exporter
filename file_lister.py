@@ -8,20 +8,21 @@ import os as _os
 
 
 class FileLister:
+    file_callback = None
     dir_path_str = ''
 
-    def __init__(self, dir_path_str='./', file_callback=None):
+    def __init__(self, dir_path_str='./', file_callback=lambda file: 'File: ' + file):
         """List all files in the directories.
         @param file_callback: A callback function that callbacks the file string.
         The callback should return a string."""
         super().__init__()
         self.dir_path_str = dir_path_str
-        self.list_files(self.dir_path_str, file_callback=file_callback)
+        self.file_callback = file_callback
 
-    def list_files(self, dir_path_str='./', file_callback=None):
+    def list_files(self):
         """List files in the subtree of the directories.
         @return: The string all the files based on the [file_callback]."""
-        path = dir_path_str
+        path = self.dir_path_str
         files = []
         to_be_return = ''
         # r=root, d=directories, f = files
@@ -30,6 +31,6 @@ class FileLister:
                 if '.dart' in file:
                     files.append(_os.path.join(r, file))
         for f in files:
-            if file_callback is not None:
-                to_be_return += str(file_callback(f)) + '\n'
+            if self.file_callback is not None:
+                to_be_return = to_be_return + str(self.file_callback(f)) + '\n'
         return to_be_return
