@@ -8,7 +8,7 @@ from file_lister import FileLister
 class FlutterLibraryExporter:
     @staticmethod
     def export_string(file_name):
-        print('export \'' + str(file_name) + '\'')
+        return 'export \'' + str(file_name) + '\''
 
     def __init__(self, file_name):
         """Export and creates an export dart file based on the file 
@@ -20,5 +20,5 @@ class FlutterLibraryExporter:
         fileLister = FileLister(
             dir_path_str='../src',
             file_callback=FlutterLibraryExporter.export_string)
-        f.write('library ' + str(file_name) + ';\n' 
-        + fileLister.list_files() + '\n')
+        f.write('library ' + str(file_name) + ';\n'
+                + fileLister.list_files() + '\n')
