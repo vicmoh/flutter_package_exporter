@@ -1,7 +1,7 @@
 # Running the script.
 FILE='export'
 run:
-	python3 export.py $(FILE)
+	python3 run.py "$(FILE)"
 
 
 # For quirck git commit push.
