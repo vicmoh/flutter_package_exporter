@@ -20,4 +20,5 @@ class FlutterLibraryExporter:
         fileLister = FileLister(
             dir_path_str='../src',
             file_callback=FlutterLibraryExporter.export_string)
-        f.write('library ' + str(file_name) + ';' + fileLister.list_files())
+        f.write('library ' + str(file_name) + ';\n' 
+        + fileLister.list_files() + '\n')
