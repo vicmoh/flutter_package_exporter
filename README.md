@@ -1,14 +1,13 @@
 # About
 
-Creates an export dart files which export all
+Creates an export dart file which exports all
 the files under the `src` folder.
 
 # Installation
 
 To install this, git clone this repo under the `lib`
 folder on your Flutter packages. All packages must be
-under under the `src` to have this exporter list all
-the widgets and exported.
+under the `src` folder to have the widgets listed and exported.
 
 For example:
 
