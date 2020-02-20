@@ -6,7 +6,7 @@
 import os as _os
 import sys as _sys
 
-PATH = _sys.argv[0]
+PATH = _sys.argv[1]
 
 
 class FileLister:
