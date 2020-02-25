@@ -29,7 +29,7 @@ To run and create export file type `make FILE='your_export_name'`.
 
 For example, typing `make FILE=flutter_components`,
 the script will find all widgets that needs to be exported.
-It outputs a `flutter_components.dart` file containing 
+It creates exporter file `flutter_components.dart` containing 
 all exported widgets. 
 
 Below is the example output of the `flutter_components.dart`
