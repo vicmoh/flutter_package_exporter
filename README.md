@@ -32,7 +32,8 @@ the script will find all widgets that needs to be exported.
 It outputs a `flutter_components.dart` file containing 
 all exported widgets. 
 
-Example below of the `flutter_components.dart`:
+Below is the example output of the `flutter_components.dart`
+after the script is ran:
 
 ```dart
 library flutter_components;
