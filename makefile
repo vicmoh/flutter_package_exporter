@@ -10,7 +10,7 @@ clean:
 	find . -type d -name __pycache__ -exec rm -r {} \+
 
 # For quirck git commit push.
-m='[AUTO]'
+m=[AUTO]
 git: clean
 	git add -A
 	git commit -m "$(m)"
