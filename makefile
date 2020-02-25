@@ -3,7 +3,7 @@ all: clean run clean
 # Running the script.
 FILE=export
 run:
-	python3 run.py "$(FILE)"
+	python3 ./src/run.py "$(FILE)"
 
 # Remove the Python Caches.
 clean:
