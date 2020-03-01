@@ -8,9 +8,9 @@ FILE_NAME = _sys.argv[1]
 
 
 def main():
-    print('Script running...')
+    print('Script running...\n')
     FlutterLibraryExporter(FILE_NAME)
-    print('Script complete.')
+    print('\nScript complete.')
 
 
 main()
