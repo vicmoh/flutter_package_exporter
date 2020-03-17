@@ -5,11 +5,11 @@ FILE=export
 run:
 	python3 ./src/run.py "$(FILE)"
 
-# Remove the Python Caches.
+# Remove the python caches.
 clean:
 	find . -type d -name __pycache__ -exec rm -r {} \+
 
-# For quirck git commit push.
+# For quick git commit push.
 m=[AUTO]
 git: clean
 	git add -A
