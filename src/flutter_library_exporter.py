@@ -18,9 +18,12 @@ class FlutterLibraryExporter:
         @param out: is the path of the [file_name].dart file to be outputed.
         @param file_name: excluding the [.dart] extension. Do not
         include the extension."""
-        if (file_name is None || file_name == '') file_name = 'exporter'
-        if (src is None || src == '') src = '../src'
-        if (out is None || out == '') out = '../bin/'
+        if (file_name is None or file_name == ''):
+            file_name = 'exporter'
+        if (src is None or src == ''):
+            src = '../src/'
+        if (out is None or out == ''):
+            out = './bin/'
         super().__init__()
         f = open(out + str(file_name) + '.dart', "w+")
         fileLister = FileLister(
@@ -30,3 +33,4 @@ class FlutterLibraryExporter:
             str(file_name) + ';\n\n' + str(fileLister.list_files())
         print(string_to_write)
         f.write(string_to_write)
+

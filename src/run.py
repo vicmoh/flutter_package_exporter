@@ -10,8 +10,11 @@ OUT = _sys.argv[3]
 
 
 def main():
+    print('FILE: ', FILE)
+    print('SRC: ', SRC)
+    print('OUT: ', OUT)
     print('Script running...\n')
-    FlutterLibraryExporter(FILE, SRC, OUT)
+    FlutterLibraryExporter(FILE, src=SRC, out=OUT)
     print('\nScript complete.')
 
 
