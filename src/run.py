@@ -6,15 +6,13 @@ import sys as _sys
 
 FILE = _sys.argv[1]
 SRC = _sys.argv[2]
-OUT = _sys.argv[3]
 
 
 def main():
     print('FILE: ', FILE)
     print('SRC: ', SRC)
-    print('OUT: ', OUT)
     print('Script running...\n')
-    FlutterLibraryExporter(FILE, src=SRC, out=OUT)
+    FlutterLibraryExporter(FILE, src=SRC)
     print('\nScript complete.')
 
 
