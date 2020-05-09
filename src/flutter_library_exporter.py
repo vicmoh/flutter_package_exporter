@@ -11,7 +11,7 @@ class FlutterLibraryExporter:
     def export_string(file_name):
         return 'export \'' + _regex.sub(r"../src/", r"./src/", str(file_name)) + '\';'
 
-    def __init__(self, file_name, src='../src/', out='./bin/'):
+    def __init__(self, file_name, src='../src/', out='../'):
         """Export and creates an export dart file based on the file 
         libraries under the [src] folder.
         @param src: is the path files to be exported.
@@ -23,7 +23,7 @@ class FlutterLibraryExporter:
         if (src is None or src == ''):
             src = '../src/'
         if (out is None or out == ''):
-            out = './bin/'
+            out = '../'
         super().__init__()
         f = open(out + str(file_name) + '.dart', "w+")
         fileLister = FileLister(
